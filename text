@@ -1,0 +1,59 @@
+New project create
+-----------------
+laravel new example-app
+
+server start
+------------
+php artisan serve
+
+controller create
+------------------
+php artisan make:controller ControllerName
+
+components create
+-----------------
+php artisan make:component ComponentName
+Db config
+---------
+php artisan tinker
+
+config('database')
+
+php artisan migrate
+
+Db config clear cache
+---------------------
+php artisan conig:cache
+
+migration create
+----------------
+php artisan make:migration create_customer_table
+
+php artisan migrate
+
+php artisan make:migration add_customer_table --table="customer"
+
+create model
+------------
+php artisan make:model Customer
+
+Insert using tinker
+-------------------
+php artisan tinker
+
+ App\Models\Customer::create(['name'=>'admin@gmail.com','password'=>'admin@123','phone_no'=>'9360010411',image=>'img'])
+
+ Query Builder
+ -------------
+
+
+
+ Middleware
+ -----------
+ php artisan make:middleware CheckUser
+
+ Resource Controller
+ ------------------
+ php artisan make:Controller TestController --resource
+
+ php artisan route:list
