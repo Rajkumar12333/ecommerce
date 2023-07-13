@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\CustomerController;
-
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,11 +37,36 @@ Route::resource('tests','TestController');
 //Routing using controller
 
 Route::get("electronics",[FirstController::class,'first']);
-Route::get('user/customer',[CustomerController::class,'index']);
-Route::post('user/customer-save',[CustomerController::class,'save']);
-Route::get('user/customer-edit/{id}',[CustomerController::class,'edit']);
-Route::post('user/customer-update',[CustomerController::class,'update']);
-Route::get('user/customer-delete/{id}',[CustomerController::class,'delete']);
+Route::get('admin/customer',[CustomerController::class,'index']);
+Route::post('admin/customer-save',[CustomerController::class,'save']);
+Route::get('admin/customer-edit/{id}',[CustomerController::class,'edit']);
+Route::post('admin/customer-update',[CustomerController::class,'update']);
+Route::get('admin/customer-delete/{id}',[CustomerController::class,'delete']);
+
+
+Route::get('admin/products',[ProductsController::class,'index']);
+Route::post('admin/products-save',[ProductsController::class,'save']);
+Route::get('admin/products-edit/{id}',[ProductsController::class,'edit']);
+Route::post('admin/products-update',[ProductsController::class,'update']);
+Route::get('admin/products-delete/{id}',[ProductsController::class,'delete']);
+
+Route::get('/product-details/{id}',[ProductsController::class,'single_index']);
+// Route::get('/product-details/{id}',[ProductsController::class,'recent_product']);
+// Route::get('user/products-viewcms/{id}',[ProductsController::class,'viewcms']);
+//frontend products
+Route::get('home',[ProductsController::class,'view']);
+Route::get('/',[ProductsController::class,'view']);
+
+Route::get('admin/products/{id}', [ProductsController::class, 'show'])->name('user.show');
+Route::get('admin/pages/{id}', [PageController::class, 'show'])->name('pages.show');
+Route::get('admin/customers/{id}', [CustomerController::class, 'show'])->name('customers.show');
+
+Route::get('admin/pages',[PageController::class,'index']);
+Route::post('admin/pages-save',[PageController::class,'save']);
+Route::get('admin/pages-edit/{id}',[PageController::class,'edit']);
+Route::post('admin/pages-update',[PageController::class,'update']);
+Route::get('admin/pages-delete/{id}',[PageController::class,'delete']);
+Route::get('about-us',[PageController::class,'aboutus']);
 //Normal routing 
 //---------------
 

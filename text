@@ -57,3 +57,6 @@ php artisan tinker
  php artisan make:Controller TestController --resource
 
  php artisan route:list
+
+
+ Content select color change css added in header

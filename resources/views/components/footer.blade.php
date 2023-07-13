@@ -26,7 +26,7 @@
             Store
           </h6>
           <ul class="list-unstyled mb-4">
-            <li><a class="text-white-50" href="#">About us</a></li>
+            <li><a class="text-white-50" href="/about-us">About us</a></li>
             <li><a class="text-white-50" href="#">Find store</a></li>
             <li><a class="text-white-50" href="#">Categories</a></li>
             <li><a class="text-white-50" href="#">Blogs</a></li>

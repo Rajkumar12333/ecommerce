@@ -81,4 +81,10 @@ class CustomerController extends Controller
         Session::flash("color","danger");
         return back();
     }
+    public function show($id)
+    {
+        $view_products = Customer::find($id);
+  
+        return response()->json($view_products);
+    }
 }
