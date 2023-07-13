@@ -36,11 +36,11 @@ Route::resource('tests','TestController');
 //Routing using controller
 
 Route::get("electronics",[FirstController::class,'first']);
-Route::get('customer',[CustomerController::class,'index']);
-Route::post('customer-save',[CustomerController::class,'save']);
-Route::get('customer-edit/{id}',[CustomerController::class,'edit']);
-Route::post('customer-update',[CustomerController::class,'update']);
-Route::get('customer-delete/{id}',[CustomerController::class,'delete']);
+Route::get('user/customer',[CustomerController::class,'index']);
+Route::post('user/customer-save',[CustomerController::class,'save']);
+Route::get('user/customer-edit/{id}',[CustomerController::class,'edit']);
+Route::post('user/customer-update',[CustomerController::class,'update']);
+Route::get('user/customer-delete/{id}',[CustomerController::class,'delete']);
 //Normal routing 
 //---------------
 
